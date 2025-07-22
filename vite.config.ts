@@ -7,7 +7,7 @@ import path from "path";
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
   ssr: {
-    noExternal: ['react', 'react-dom', 'react/jsx-dev-runtime'],
+    noExternal: ['react', 'react-dom'],
   },
   resolve: {
     alias: {
