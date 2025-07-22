@@ -6,6 +6,9 @@ import path from "path";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  ssr: {
+    noExternal: ['react', 'react-dom'],
+  },
   resolve: {
     alias: {
       react: path.resolve("./node_modules/react"),
